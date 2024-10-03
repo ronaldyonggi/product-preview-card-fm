@@ -1,5 +1,6 @@
 import './styles/reset.css'
 import './styles/global.css'
+import styles from './index.module.css'
 
 import { createRoot } from 'react-dom/client';
 import ProductCard from './components/ProductCard/ProductCard';
@@ -21,7 +22,7 @@ const product = {
 
 export function App() {
   return (
-    <main>
+    <main className={styles.appContainer}>
       <ProductCard product={product} />
     </main>
   );
