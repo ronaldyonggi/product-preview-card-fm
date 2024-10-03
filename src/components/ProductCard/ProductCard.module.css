@@ -8,12 +8,11 @@
   border-radius: 8px;
   border: none;
   margin-top: 3vh;
+  overflow: hidden;
 }
 
 img {
   width: 100%;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
 }
 
 .content {
@@ -41,12 +40,13 @@ img {
   line-height: 1.6;
   font-size: 0.8rem;
   font-family: var(--font-family-montserrat);
-  margin-bottom: 1rem;;
+  margin-bottom: 1rem;
 }
 
 .priceContainer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .price {
@@ -71,5 +71,24 @@ img {
 }
 
 @media screen and (min-width: 375px) {
-  
+  .container {
+    flex-direction: row;
+    max-width: 500px;
+  }
+
+  .imageContainer,
+  .content {
+    width: 50%;
+  }
+
+  .image {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
