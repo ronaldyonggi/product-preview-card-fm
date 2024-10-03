@@ -17,11 +17,14 @@ export default function ProductCard({ product }: ProductCardProps) {
   }, []);
   return (
     <div className={styles.container}>
+      <div className={styles.imageContainer}>
+
       <img
         src={width <= 375 ? product.image.mobile : product.image.desktop}
         alt='Image of product'
         className={styles.image}
       />
+      </div>
       <div className={styles.content}>
         <p className={styles.category}>{product.category}</p>
         <h1 className={styles.name}>{product.name}</h1>
