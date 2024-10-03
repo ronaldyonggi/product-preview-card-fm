@@ -4,6 +4,4 @@ body {
     font-family: var(--font-family-montserrat);
     font-size: var(--font-size-body);
     background-color: var(--color-cream);
-    display: flex;
-    justify-content: center;
 }
